@@ -1,0 +1,19 @@
+[package]
+name = "dircon"
+version = "0.1.0"
+edition = "2021"
+authors = ["Twelve"]
+description = "A command line tool to create and delete directories/files."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = {version = "*", features = ["derive"]}
+dirs = "5.0.1"
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.52.0"
+ansi_term = "0.12"
+
+[build-dependencies]
+winres = "0.1.12"
